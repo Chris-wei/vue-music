@@ -1,6 +1,9 @@
-# qqmusic
+# vue-music
 
-> A vue project for music
+> A vue project for music（vue仿QQ音乐移动端官网）
+
+##项目介绍
+采用vue做的仿QQ音乐移动端官网，项目中涉及到了 vue2 , vuex , vue-router , mint-ui 等 ，比较适合 vue 初学者，可以深入了解vue的组件化编程思想，提高自己对vue的认识;
 
 ## Build Setup
 

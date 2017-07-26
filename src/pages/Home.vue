@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script>
+<script type="es6">
     //引入头部
     import Topheader from '@/components/Topheader'
     //引入推荐模块
@@ -17,7 +17,7 @@
         name: 'hello',
         data () {
           return {
-              active : 'recom',
+              active : '',
               navList : [
                   { type : 'recom' , text: '推荐' } ,
                   { type : 'toplist' , text : '排行榜' } ,
@@ -29,10 +29,16 @@
 			Topheader
         },
 		methods : {
+        	//菜单栏切换
 			toggle : function (e) {
 				this.active = e.srcElement.dataset.nav;
+				this.$router.push( '/' + this.active );
 			}
 		},
+        beforeMount : function () {
+        	//获取当前的菜单栏
+            this.active = this.$route.path.replace('/','');
+		}
     }
 </script>
 

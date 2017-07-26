@@ -7,5 +7,9 @@ export default {
 	//获取电台列表
 	get_radiostation(state){
 		return state.radioList;
+	},
+	//获取音乐列表
+	get_musiclist(state){
+		return state.musicList
 	}
 }

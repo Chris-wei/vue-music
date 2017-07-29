@@ -13,9 +13,17 @@ export default new Router({
           name: 'Home',
 		  redirect : '/recom',
 		  children : [
-			  { path : '/recom' , component : resolve => require.ensure([], () => resolve(require('@/components/Recom.vue')), 'Recom') },
-			  { path : '/toplist' , component : resolve => require.ensure([], () => resolve(require('@/components/Toplist.vue')), 'Toplist') },
-			  { path : '/search' , component : resolve => require.ensure([], () => resolve(require('@/components/Search.vue')), 'Search') }
+			  {
+				  path : '/recom' ,
+				  component : resolve => require.ensure([], () => resolve(require('@/components/Recom.vue')), 'Recom')
+			  },
+			  {
+				  path : '/toplist' ,
+				  component : resolve => require.ensure([], () => resolve(require('@/components/Toplist.vue')), 'Toplist')
+			  },
+			  {   path : '/search' ,
+				  component : resolve => require.ensure([], () => resolve(require('@/components/Search.vue')), 'Search')
+			  }
 		  ]
       }
     ]

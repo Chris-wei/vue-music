@@ -1,9 +1,9 @@
 <template>
     <div class="content_wrapper">
         <!--轮播图-->
-        <Uiswiper :picList="picList" ></Uiswiper>
+        <keep-alive><Uiswiper :picList="picList" ></Uiswiper></keep-alive>
         <!--电台-->
-        <Radiostation :radioList="radioList"></Radiostation>
+        <keep-alive><Radiostation :radioList="radioList"></Radiostation></keep-alive>
         <!--热门歌单-->
         <div class="mod_twocol_list mod_twocol_list_special">
             <h2 class="list_title">热门歌单</h2>
@@ -38,10 +38,19 @@
 			Radiostation
         },
 		beforeMount : function () {
-			//获取轮播图
-			this.picList = this.$store.getters.get_piclist ;
-			//获取电台
-            this.radioList = this.$store.getters.get_radiostation ;
+			//获取首页数据
+            let _this = this;
+			let url = 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg?g_tk=5381&uin=867746469&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&_=1501295290725';
+			$.ajax({
+				url: url,
+				type: 'GET',
+				dataType: 'jsonp',
+				success: function ( res ) {
+					let data = res.data;
+                    _this.picList = data.slider;
+                    _this.radioList = data.radioList;
+				}
+			})
 		}
     }
 </script>

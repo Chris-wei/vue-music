@@ -4,30 +4,11 @@ import mutations from './mutations'
 import actions from './actions'
 import getters from './getters'
 
-Vue.use(Vuex )
+Vue.use( Vuex )
 
 //项目中数据
 
 const  state = {
-	//轮播图
-	picList : [
-		'https://y.gtimg.cn/music/photo_new/T003R720x288M000003saRWL4feDuy.jpg',
-		'https://y.gtimg.cn/music/photo_new/T003R720x288M000003EB2tz1o6l3P.jpg',
-		'https://y.gtimg.cn/music/photo_new/T003R720x288M000003MsTXn0MKv8Q.jpg',
-		'https://y.gtimg.cn/music/photo_new/T003R720x288M000002QbqBv1FVfO2.jpg',
-		'https://y.gtimg.cn/music/photo_new/T003R720x288M000004Eta9U22i6L0.jpg'
-	],
-	//电台
-	radioList : [
-		{
-			url : 'https://y.gtimg.cn/music/photo/radio/track_radio_307_13_1.jpg' ,
-			desc : '一人一首招牌歌'
-		},
-		{
-			url : 'https://y.gtimg.cn/music/photo/radio/track_radio_199_13_1.jpg' ,
-			desc : '热歌'
-		}
-	],
 	//排行榜
 	musicList :  [
 		{
@@ -303,6 +284,20 @@ const  state = {
 			"topTitle":"巅峰榜·K歌金曲",
 			"type":0
 		}
+	],
+	//热门搜索
+	hotKeys : [
+		'陈奕迅',
+		'DJ舞曲(华语)系列5 DJ',
+		'悟空传',
+		'WHAT ARE WORDS',
+		'中国好声音 第六季',
+		'非酋 薛明媛/朱贺',
+		'一生所爱 卢冠廷',
+		'舍得'
+	],
+	recordList :[
+
 	]
 }
 

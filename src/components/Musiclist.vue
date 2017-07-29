@@ -92,6 +92,8 @@
         height: 10px;
         margin-right: 3px;
         z-index: 10;
+        background: url("../assets/icon_listen.png") no-repeat center center;
+        background-size: cover;
     }
     .mod_topic li .topic_info {
         position: relative;

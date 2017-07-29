@@ -5,11 +5,11 @@
             <li v-for=" ( item , index ) in radioList" :key="index" class="js_play_radio">
                 <a class="list_main" href="javascript:;">
                     <div class="list_media">
-                        <img class="list_pic" :src="item['url']" alt="">
+                        <img class="list_pic" :src="item.picUrl" alt="">
                         <span class="icon icon_play"></span>
                     </div>
                     <div class="list_info">
-                        <h3 class="list_tit tit_two_row">{{ item['desc'] }}</h3>
+                        <h3 class="list_tit tit_two_row">{{ item.Ftitle }}</h3>
                     </div>
                 </a>
             </li>

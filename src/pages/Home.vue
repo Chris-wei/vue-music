@@ -5,9 +5,6 @@
           <a v-for="items in navList" href="javascript:;" :data-nav="items['type']" @click="toggle($event)" :class="{ active : active == items['type'] }">{{items['text']}}</a>
       </div>
       <!--页面子路由-->
-      <keep-alive>
-          <router-view v-if="$route.meta.keepAlive"></router-view>
-      </keep-alive>
       <router-view v-if="!$route.meta.keepAlive"></router-view>
   </div>
 </template>

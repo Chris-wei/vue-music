@@ -1,5 +1,6 @@
 <template>
     <div class="content_wrapper">
+        <Loadingbox :isLoading="isLoading"></Loadingbox>
         <!--轮播图-->
         <keep-alive><Uiswiper :picList="picList" ></Uiswiper></keep-alive>
         <!--电台-->
@@ -22,6 +23,8 @@
 </template>
 
 <script>
+    //引入loading组件
+    import Loadingbox from './Loadingbox.vue'
 	//引入轮播图组件
 	import Uiswiper from './Uiswiper.vue'
     //引入电台组件
@@ -29,28 +32,45 @@
     export default{
 		data(){
 			return{
+				isLoading : true ,
 				picList : [],
 				radioList : []
             }
         },
         components : {
+			Loadingbox,
 			Uiswiper ,
 			Radiostation
         },
+        methods : {
+            getRecomData(){
+				let _this = this;
+				let url = 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg';
+				$.ajax({
+					url: url,
+					type: 'GET',
+					dataType: 'jsonp',
+					success : function ( res ) {
+						let data = res.data;
+						_this.isLoading = false;
+						_this.picList = data.slider;
+						_this.radioList = data.radioList;
+						//存入数据
+						_this.$store.commit('set_picList' , { picList : data.slider });
+						_this.$store.commit('set_radioList' , { radioList : data.radioList });
+					}
+				})
+            }
+		},
 		beforeMount : function () {
 			//获取首页数据
-            let _this = this;
-			let url = 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg?g_tk=5381&uin=867746469&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&_=1501295290725';
-			$.ajax({
-				url: url,
-				type: 'GET',
-				dataType: 'jsonp',
-				success: function ( res ) {
-					let data = res.data;
-                    _this.picList = data.slider;
-                    _this.radioList = data.radioList;
-				}
-			})
+            if( this.$store.getters.get_piclist.length ){
+            	this.picList = this.$store.getters.get_piclist;
+            	this.radioList = this.$store.getters.get_radioList;
+            	this.isLoading = false;
+            }else{
+            	this.getRecomData();
+            }
 		}
     }
 </script>

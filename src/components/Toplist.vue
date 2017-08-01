@@ -20,8 +20,26 @@
         components : {
 			Musiclist
         },
+        methods : {
+		    getMusicListData(){
+				let _this = this;
+				let url = 'https://c.y.qq.com/v8/fcg-bin/fcg_myqq_toplist.fcg';
+				$.ajax({
+					url : url ,
+					type : 'get' ,
+					dataType : 'jsonp' ,
+					success : function (data) {
+						let topList = data.data.topList;
+						_this.Musiclist = topList;
+						//缓存数据
+                        _this.$store.commit('set_musicList' , { musicList : topList });
+					}
+				})
+            }
+        },
 		beforeMount : function () {
-            this.Musiclist = this.$store.getters.get_musiclist;
+            if( this.$store.getters.get_musiclist.length ) this.Musiclist = this.$store.getters.get_musiclist;
+			else this.getMusicListData();
 		}
     }
 </script>

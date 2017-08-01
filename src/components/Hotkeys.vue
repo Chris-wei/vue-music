@@ -2,7 +2,7 @@
     <div class="mod_search_result" v-show="isShow">
         <h3 class="result_tit">热门搜索</h3>
         <div class="result_tags">
-            <a href="javascript:;" class="tag_s tag_hot" @click="search($event)" > {{ hotKeysObject['special_key'] }}</a>
+            <a :href="hotKeysObject['special_url']" class="tag_s tag_hot" @click="search($event)" > {{ hotKeysObject['special_key'] }}</a>
             <a v-for=" ( item , index ) in hotKeysObject['hotKeys'] " href="javascript:;" class="tag_s"
                :data-n="item['n']" :key="index" @click="search($event)" v-if="index < 7 "> {{ item['k'] }} </a>
         </div>
@@ -32,7 +32,8 @@
 					success : function (data) {
 						_this.hotKeysObject = {
 							special_key : data.data.special_key ,
-							hotKeys : data.data.hotkey
+							hotKeys : data.data.hotkey ,
+                            special_url : data.data.special_url
                         }
                         //缓存数据
                         _this.$store.commit('set_hotKeysObject' , { hotKeysObject : _this.hotKeysObject })

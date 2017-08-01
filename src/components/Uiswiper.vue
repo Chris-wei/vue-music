@@ -2,7 +2,7 @@
     <div class="ul-container">
         <mt-swipe :auto="3000">
             <mt-swipe-item v-for="(item , key ) in picList" :key="key">
-                <img :src=" item.picUrl " alt="">
+                <a :href="item.linkUrl "><img :src=" item.picUrl "></a>
             </mt-swipe-item>
         </mt-swipe>
     </div>

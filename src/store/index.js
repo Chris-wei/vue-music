@@ -18,6 +18,7 @@ const state = {
 	//热门搜索
 	hotKeysObject : {
 		special_key : '',
+		special_url : '',
 		hotKeys : []
 	},
 	//历史记录

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bbd79aa-1405-4d61-a665-fb8876bcf449" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,7 +80,7 @@
             <state relative-caret-position="1794">
               <caret line="69" column="39" lean-forward="false" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
               <folding>
-                <marker date="1501585643317" expanded="false" signature="495:499" ph="&gt;" />
+                <marker date="1501636877320" expanded="false" signature="495:499" ph="&gt;" />
               </folding>
             </state>
           </provider>
@@ -106,25 +106,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hotkeys.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Hotkeys.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Hotkeys.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="416">
               <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="104">
-                <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-                <folding />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -525,12 +512,12 @@
       <workItem from="1501466113162" duration="5555000" />
       <workItem from="1501579934841" duration="6225000" />
       <workItem from="1501636314190" duration="313000" />
-      <workItem from="1501636732616" duration="91000" />
+      <workItem from="1501636732616" duration="209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51142000" />
+    <option name="totallyTimeSpent" value="51260000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -542,7 +529,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1040" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16344085" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -604,7 +591,7 @@
         <state relative-caret-position="1872">
           <caret line="72" column="28" lean-forward="false" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
           <folding>
-            <marker date="1501585643317" expanded="false" signature="495:499" ph="&gt;" />
+            <marker date="1501636877320" expanded="false" signature="495:499" ph="&gt;" />
           </folding>
         </state>
       </provider>
@@ -699,7 +686,7 @@
         <state relative-caret-position="1872">
           <caret line="72" column="28" lean-forward="false" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
           <folding>
-            <marker date="1501585643317" expanded="false" signature="495:499" ph="&gt;" />
+            <marker date="1501636877320" expanded="false" signature="495:499" ph="&gt;" />
           </folding>
         </state>
       </provider>
@@ -904,7 +891,7 @@
         <state relative-caret-position="1794">
           <caret line="69" column="39" lean-forward="false" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
           <folding>
-            <marker date="1501585643317" expanded="false" signature="495:499" ph="&gt;" />
+            <marker date="1501636877320" expanded="false" signature="495:499" ph="&gt;" />
           </folding>
         </state>
       </provider>
@@ -933,14 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Hotkeys.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Musiclist.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
@@ -957,6 +936,14 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Hotkeys.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
